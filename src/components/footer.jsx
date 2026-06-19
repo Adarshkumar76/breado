@@ -1,5 +1,6 @@
 import './footer.css'
 import logoImg from '../assets/images/logo.png'
+import { Link } from 'react-router-dom'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -9,9 +10,9 @@ export default function Footer() {
       <div className="footer-top">
         <div className="container footer-top-inner">
           <div className="footer-brand">
-            <a href="#" className="footer-logo">
+            <Link to="/" className="footer-logo">
               <img src={logoImg} alt="Mr. Breado" />
-            </a>
+            </Link>
             <p className="footer-tagline">
               The Best You Can Get! Fresh food delivered hot to your door in under 30 minutes.
             </p>
@@ -27,30 +28,30 @@ export default function Footer() {
             <div className="footer-col">
               <h4>Quick Links</h4>
               <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#how-it-works">How It Works</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#download">Download App</a></li>
+                <li><Link to="/">Home</Link></li>
+                <li><a href="/#how-it-works">How It Works</a></li>
+                <li><a href="/#features">Features</a></li>
+                <li><a href="/#download">Download App</a></li>
               </ul>
             </div>
 
             <div className="footer-col">
-              <h4>For Partners</h4>
+              <h4>Company</h4>
               <ul>
-                <li><a href="#">Add Your Restaurant</a></li>
+                <li><Link to="/about" id="footer-about">About Us</Link></li>
+                <li><Link to="/contact" id="footer-contact">Contact Us</Link></li>
                 <li><a href="#">Become a Rider</a></li>
-                <li><a href="#">Partner Benefits</a></li>
-                <li><a href="#">Advertise with Us</a></li>
+                <li><a href="#">Partner with Us</a></li>
               </ul>
             </div>
 
             <div className="footer-col">
-              <h4>Support</h4>
+              <h4>Legal</h4>
               <ul>
-                <li><a href="#">Help Center</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
-                <li><a href="#">Cookie Policy</a></li>
+                <li><Link to="/privacy" id="footer-privacy">Privacy Policy</Link></li>
+                <li><Link to="/terms" id="footer-terms">Terms & Conditions</Link></li>
+                <li><Link to="/return-policy" id="footer-returns">Return Policy</Link></li>
+                <li><Link to="/delete-data" id="footer-delete">Delete My Data</Link></li>
               </ul>
             </div>
 
